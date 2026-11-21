@@ -7,9 +7,10 @@
   const mobileQuery = window.matchMedia('(max-width: 660px)');
   const homeUrl = window.location.pathname + window.location.search;
   const monthsZh = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
+  const monthsEn = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
   let pendingHomeRestore = false;
-  let activeMobileLanguage = 'en';
+  let activeMobileLanguage = 'zh';
 
   function parseDate(dateString) {
     const [year, month, day] = dateString.split('-').map(Number);
@@ -30,6 +31,11 @@
       groups.get(year).push(article);
       return groups;
     }, new Map());
+  }
+
+  function formatDateEn(dateString) {
+    const dateParts = parseDate(dateString);
+    return monthsEn[dateParts.month - 1] + ' ' + dateParts.day + ', ' + dateParts.year;
   }
 
   function saveHomeState() {
@@ -74,7 +80,8 @@
         dateStamp.dateTime = article.date;
         dateStamp.append(
           createTextElement('strong', '', String(dateParts.day).padStart(2, '0')),
-          createTextElement('span', '', monthsZh[dateParts.month - 1])
+          createTextElement('span', 'month-zh', monthsZh[dateParts.month - 1]),
+          createTextElement('span', 'month-en', monthsEn[dateParts.month - 1])
         );
         card.append(dateStamp);
 
@@ -98,7 +105,8 @@
 
         const readButton = createTextElement('button', 'read-button', '点击阅读全文');
         readButton.type = 'button';
-        readButton.setAttribute('aria-label', '阅读全文：' + article.titleZh);
+        readButton.textContent = '点击阅读全文 / Read the full piece';
+        readButton.setAttribute('aria-label', '阅读全文 / Read the full piece: ' + article.titleZh + ' / ' + article.titleEn);
         readButton.addEventListener('click', () => openArticle(article.slug));
         copy.append(readButton);
         card.append(copy);
@@ -128,10 +136,39 @@
     document.querySelectorAll('.year-section').forEach((section) => observer.observe(section));
   }
 
-  function renderParagraphs(container, paragraphs, closing) {
-    container.replaceChildren();
-    paragraphs.forEach((paragraph) => container.append(createTextElement('p', '', paragraph)));
-    if (closing) container.append(createTextElement('p', 'closing-note', closing));
+  function createParallelCell(language, value, isClosing) {
+    const cell = document.createElement('div');
+    cell.className = 'parallel-cell ' + (language === 'en' ? 'english-cell' : 'chinese-cell');
+    cell.dataset.languagePanel = language;
+    const paragraph = createTextElement('p', isClosing ? 'closing-note' : '', value);
+    if (language === 'en') paragraph.lang = 'en';
+    cell.append(paragraph);
+    return cell;
+  }
+
+  function renderParallelText(article) {
+    const body = document.querySelector('#parallel-body');
+    body.replaceChildren();
+
+    article.bodyEn.forEach((englishParagraph, index) => {
+      const row = document.createElement('div');
+      row.className = 'parallel-row';
+      row.append(
+        createParallelCell('en', englishParagraph, false),
+        createParallelCell('zh', article.bodyZh[index] || '', false)
+      );
+      body.append(row);
+    });
+
+    if (article.closingEn || article.closingZh) {
+      const closingRow = document.createElement('div');
+      closingRow.className = 'parallel-row closing-row';
+      closingRow.append(
+        createParallelCell('en', article.closingEn || '', true),
+        createParallelCell('zh', article.closingZh || '', true)
+      );
+      body.append(closingRow);
+    }
   }
 
   function setMobileLanguage(language) {
@@ -165,7 +202,11 @@
 
     homeView.hidden = true;
     articleView.hidden = false;
-    document.querySelector('#article-date').textContent = article.displayDateZh;
+    const articleDate = document.querySelector('#article-date');
+    articleDate.replaceChildren(
+      createTextElement('p', '', article.displayDateZh),
+      createTextElement('p', '', formatDateEn(article.date))
+    );
     document.querySelector('#article-title').textContent = article.titleZh;
     document.querySelector('#article-title-en').textContent = article.titleEn;
 
@@ -174,17 +215,20 @@
       const image = document.querySelector('#article-image');
       image.src = article.image;
       image.alt = article.imageAlt;
-      document.querySelector('#article-caption').textContent = article.caption;
+      const caption = document.querySelector('#article-caption');
+      caption.replaceChildren(
+        createTextElement('span', '', article.caption),
+        createTextElement('span', '', article.captionEn || article.caption)
+      );
       imageWrap.hidden = false;
     } else {
       imageWrap.hidden = true;
     }
 
-    renderParagraphs(document.querySelector('#english-text'), article.bodyEn, article.closingEn);
-    renderParagraphs(document.querySelector('#chinese-text'), article.bodyZh, article.closingZh);
-    activeMobileLanguage = 'en';
+    renderParallelText(article);
+    activeMobileLanguage = 'zh';
     syncResponsiveLanguage();
-    document.title = article.titleZh + ' · 片言菲林';
+    document.title = article.titleZh + ' / ' + article.titleEn + ' · 片言菲林 Framelet';
     window.scrollTo({ top: 0, behavior: 'instant' });
   }
 

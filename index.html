@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="片言菲林 Framelet：刘李的文学随笔与双语阅读档案。"
+      content="片言菲林 Framelet：刘李的文学随笔与双语阅读档案。A bilingual archive of literary essays by Liu Li."
     />
     <meta name="theme-color" content="#f3f1eb" />
     <title>片言菲林 Framelet</title>
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">跳到正文</a>
+    <a class="skip-link" href="#main">跳到正文 / Skip to content</a>
 
     <main id="main">
       <section id="home-view" class="view" aria-labelledby="site-title">
@@ -23,18 +23,28 @@
           </div>
           <div class="hero-copy">
             <p class="eyebrow">片言菲林 · FRAMELET</p>
-            <h1 id="site-title">把片言，留在时光里。</h1>
-            <p class="preface">
-              这里收存我写下的故事与随笔。它们来自旧街、故人、动物与那些不肯轻易散去的心绪；
-              像一格格菲林，在时间里显影，也等待另一个人安静地读完。
-            </p>
-            <p class="signature">刘李</p>
+            <h1 id="site-title" class="bilingual-title">
+              <span>把片言，留在时光里。</span>
+              <span lang="en">Keep each fragment in the light of time.</span>
+            </h1>
+            <div class="preface bilingual-copy">
+              <p>
+                我总迷信刹那。迷信快门“咔嗒”一声截断的时间流，迷信钢笔尖在纸面短暂驻足的凹痕。
+                这些零星的、未及修饰的显影，或许比过度曝光的回忆更值得留恋。
+              </p>
+              <p lang="en">
+                I have always placed my faith in the instant: in the click of a shutter severing the current of time,
+                in the small indentation left when a fountain-pen nib pauses on paper. These scattered, unretouched
+                impressions may be more worth holding on to than memories washed out by overexposure.
+              </p>
+            </div>
+            <p class="signature">刘李 · <span lang="en">Liu Li</span></p>
           </div>
         </header>
 
         <div class="archive-shell shell">
           <aside class="year-rail" aria-label="按年份浏览">
-            <p class="rail-label">年志</p>
+            <p class="rail-label">年志 / <span lang="en">Archive</span></p>
             <nav id="year-nav"></nav>
           </aside>
           <div id="archive" class="archive" aria-live="polite"></div>
@@ -42,15 +52,16 @@
 
         <footer class="site-footer shell">
           <img src="assets/logo.png" alt="片言菲林 Framelet" />
-          <p>文字会走远，但仍有一格光留在这里。</p>
+          <div class="footer-copy bilingual-copy">
+            <p>文字会走远，但仍有一格光留在这里。</p>
+            <p lang="en">Words travel far; one frame of light remains here.</p>
+          </div>
         </footer>
       </section>
 
       <article id="article-view" class="view article-view" hidden>
         <header class="reader-bar">
-          <button id="back-home" class="back-button" type="button">
-            <span aria-hidden="true">←</span> 返回主页
-          </button>
+          <button id="back-home" class="back-button" type="button">返回主页 / <span lang="en">Home</span></button>
           <div class="reader-brand">
             <img src="assets/logo.png" alt="" />
             <span>FRAMELET</span>
@@ -59,7 +70,7 @@
 
         <div class="reader-shell shell">
           <header class="article-heading">
-            <p id="article-date" class="article-date"></p>
+            <div id="article-date" class="article-date bilingual-meta"></div>
             <h1 id="article-title"></h1>
             <p id="article-title-en" class="article-title-en" lang="en"></p>
           </header>
@@ -70,30 +81,31 @@
           </figure>
 
           <div class="mobile-language-tabs" aria-label="切换阅读语言">
-            <button type="button" data-language="en" class="is-active">English</button>
-            <button type="button" data-language="zh">中文原文</button>
+            <button type="button" data-language="en">英文译文 / <span lang="en">English</span></button>
+            <button type="button" data-language="zh" class="is-active">中文原文 / <span lang="en">Chinese</span></button>
           </div>
 
           <div class="parallel-text">
-            <section class="language-column english-column" data-language-panel="en" aria-labelledby="english-label">
+            <div class="column-heading english-column" data-language-panel="en">
               <div class="column-label" id="english-label">
                 <span>EN</span>
-                <p>English Translation</p>
+                <p>英文译文 / <span lang="en">English Translation</span></p>
               </div>
-              <div id="english-text" class="prose" lang="en"></div>
-            </section>
-            <section class="language-column chinese-column" data-language-panel="zh" aria-labelledby="chinese-label">
+            </div>
+            <div class="column-heading chinese-column" data-language-panel="zh">
               <div class="column-label" id="chinese-label">
                 <span>中</span>
-                <p>中文原文</p>
+                <p>中文原文 / <span lang="en">Chinese Original</span></p>
               </div>
-              <div id="chinese-text" class="prose"></div>
-            </section>
+            </div>
+            <div id="parallel-body" class="parallel-body prose"></div>
           </div>
 
           <footer class="article-end">
             <span aria-hidden="true">※</span>
-            <button id="back-home-bottom" class="text-button" type="button">读完了，返回主页</button>
+            <button id="back-home-bottom" class="text-button" type="button">
+              读完了，返回主页 / <span lang="en">Finished — return home</span>
+            </button>
           </footer>
         </div>
       </article>

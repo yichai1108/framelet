@@ -146,8 +146,9 @@ window.FRAMELET_ARTICLES = [
     date: '2025-09-16',
     displayDateZh: '2025年9月16日',
     image: 'assets/black-tiger.png',
-    imageAlt: '深夜监控画面中，两只狗守在老屋门外',
+    imageAlt: '深夜监控画面中，两只狗守在老屋门外 / Two dogs keep watch outside the old house at night',
     caption: '老屋的深夜监控画面 · 2025年9月16日',
+    captionEn: 'Night camera view of the old house · September 16, 2025',
     closingZh: '图文：刘李',
     closingEn: 'Text and image by Liu Li',
     bodyZh: [
