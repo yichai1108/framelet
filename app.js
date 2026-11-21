@@ -167,7 +167,7 @@
       const translationCredit = createTextElement(
         'p',
         'translation-credit',
-        '翻译：ChatGPT / Translated by ChatGPT'
+        'Translated by ChatGPT'
       );
       englishClosing.append(translationCredit);
       closingRow.append(englishClosing, createParallelCell('zh', article.closingZh || '', true));
