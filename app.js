@@ -103,6 +103,16 @@
           createTextElement('p', 'title-en', article.titleEn)
         );
 
+        if (article.addendumDateZh || article.addendumDateEn) {
+          const addendumMeta = document.createElement('p');
+          addendumMeta.className = 'addendum-meta';
+          addendumMeta.append(
+            createTextElement('span', '', article.addendumDateZh || ''),
+            createTextElement('span', '', article.addendumDateEn || '')
+          );
+          copy.append(addendumMeta);
+        }
+
         const readButton = createTextElement('button', 'read-button', '点击阅读全文');
         readButton.type = 'button';
         readButton.textContent = '点击阅读全文 / Read the full piece';
@@ -164,14 +174,30 @@
       const closingRow = document.createElement('div');
       closingRow.className = 'parallel-row closing-row';
       const englishClosing = createParallelCell('en', article.closingEn || '', true);
-      const translationCredit = createTextElement(
-        'p',
-        'translation-credit',
-        'Translated by ChatGPT'
-      );
-      englishClosing.append(translationCredit);
       closingRow.append(englishClosing, createParallelCell('zh', article.closingZh || '', true));
       body.append(closingRow);
+    }
+
+    if ((article.addendumEn && article.addendumEn.length) || (article.addendumZh && article.addendumZh.length)) {
+      const headingRow = document.createElement('div');
+      headingRow.className = 'parallel-row addendum-heading-row';
+      const englishHeading = createParallelCell('en', article.addendumDateEn || 'Addendum', false);
+      const chineseHeading = createParallelCell('zh', article.addendumDateZh || '补记', false);
+      englishHeading.classList.add('addendum-heading-cell');
+      chineseHeading.classList.add('addendum-heading-cell');
+      headingRow.append(englishHeading, chineseHeading);
+      body.append(headingRow);
+
+      const addendumLength = Math.max(article.addendumEn?.length || 0, article.addendumZh?.length || 0);
+      for (let index = 0; index < addendumLength; index += 1) {
+        const row = document.createElement('div');
+        row.className = 'parallel-row addendum-row';
+        row.append(
+          createParallelCell('en', article.addendumEn?.[index] || '', false),
+          createParallelCell('zh', article.addendumZh?.[index] || '', false)
+        );
+        body.append(row);
+      }
     }
   }
 

@@ -333,6 +333,21 @@ img {
   letter-spacing: -0.035em;
 }
 
+.addendum-meta {
+  display: grid;
+  gap: 5px;
+  margin: 22px 0 0;
+  color: var(--mint-dark);
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.07em;
+}
+
+.addendum-meta span {
+  font-size: inherit;
+}
+
 .read-button,
 .text-button {
   border: 0;
@@ -613,12 +628,22 @@ img {
   font-style: italic;
 }
 
-.prose .translation-credit {
-  margin-top: 1.35em;
+.addendum-heading-cell {
+  padding-top: 4.5em;
+  padding-bottom: 2.4em;
+  border-top: 1px solid var(--line);
+}
+
+.addendum-heading-cell p {
+  color: var(--mint-dark);
   font-family: var(--sans);
-  font-size: 0.875rem;
-  font-style: normal;
-  letter-spacing: 0.04em;
+  font-size: 0.92rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+}
+
+.addendum-heading-row .english-cell p {
+  text-transform: uppercase;
 }
 
 .article-end {
