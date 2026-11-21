@@ -163,10 +163,14 @@
     if (article.closingEn || article.closingZh) {
       const closingRow = document.createElement('div');
       closingRow.className = 'parallel-row closing-row';
-      closingRow.append(
-        createParallelCell('en', article.closingEn || '', true),
-        createParallelCell('zh', article.closingZh || '', true)
+      const englishClosing = createParallelCell('en', article.closingEn || '', true);
+      const translationCredit = createTextElement(
+        'p',
+        'translation-credit',
+        '翻译：ChatGPT / Translated by ChatGPT'
       );
+      englishClosing.append(translationCredit);
+      closingRow.append(englishClosing, createParallelCell('zh', article.closingZh || '', true));
       body.append(closingRow);
     }
   }

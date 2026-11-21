@@ -448,7 +448,7 @@ img {
 }
 
 .article-heading {
-  width: min(1200px, 100%);
+  width: min(1600px, 100%);
   margin: 0 auto 76px;
   text-align: center;
 }
@@ -479,10 +479,11 @@ img {
   margin: 22px 0 0;
   color: var(--muted);
   font-family: var(--serif-en);
-  font-size: clamp(2.4rem, 5vw, 5.2rem);
+  font-size: clamp(2.2rem, 3.8vw, 4.5rem);
   font-style: normal;
   line-height: 1.15;
   letter-spacing: -0.05em;
+  white-space: nowrap;
 }
 
 .article-image-wrap {
@@ -612,6 +613,14 @@ img {
   font-style: italic;
 }
 
+.prose .translation-credit {
+  margin-top: 1.35em;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
 .article-end {
   display: flex;
   flex-direction: column;
@@ -649,6 +658,10 @@ img {
 
   .hero h1 {
     max-width: none;
+  }
+
+  .article-title-en {
+    white-space: normal;
   }
 
   .archive-shell {
