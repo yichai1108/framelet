@@ -1,27 +1,5 @@
 # 片言菲林 Framelet
 
-一个为文学随笔设计的中英双语静态网站。源码仓库保持私有，目前未启用公开的 GitHub Pages。
+刘李（Nate Lew Lee）的个人文学与影像记录。这里收存散文、片段与照片，也为中文作品保留英文译文。
 
-## 网站内容
-
-- 首页序言、Logo 与按年份浏览的文章档案
-- 每篇文章显示标题、日期及可用配图
-- 阅读页左侧为英文文学翻译，右侧为中文原文；对应段落从同一高度开始
-- 所有可见中文界面文字都有同字号英文对应文本
-- 手机端可在英文与中文之间切换
-- 返回主页时恢复进入文章前的滚动位置
-- 不依赖框架、数据库或外部字体
-
-## 本地预览
-
-在本文件夹中启动任意静态文件服务器，然后打开首页即可。不要直接双击文件预览，因为浏览器对本地文件的历史记录行为可能不同。
-
-## GitHub 状态
-
-源码保存在私有仓库 yichai1108/framelet。为避免与 yichai1108.github.io 混淆，该仓库不启用独立的公开 Pages 地址。
-
-## 修改文章
-
-文章、日期、配图和翻译都集中在 content.js。新增文章时复制一组文章对象并修改内容即可。
-
-说明：《黑虎》的原始 Word 文档没有发布日期，目前暂按配图画面上的 2025-09-16 归档。
+A personal archive of writing and images by Nate Lew Lee, gathering essays, fragments, and photographs alongside their literary English translations.

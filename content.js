@@ -8,8 +8,8 @@ window.FRAMELET_ARTICLES = [
     image: null,
     imageAlt: '',
     caption: '',
-    closingZh: '谨以微文，遥寄旧时挚友。—— 文稿：Nate 刘李',
-    closingEn: 'A small piece sent across the years to a dear friend from long ago. — Nate Liu Li',
+    closingZh: '谨以微文，遥寄旧时挚友。—— 文稿：刘李 · Nate Lew Lee',
+    closingEn: 'A small piece sent across the years to a dear friend from long ago. — Nate Lew Lee',
     bodyZh: [
       '春天是有絮的。',
       '我说的不是柳絮，是湿地水边蒲草的絮。它们从褐色的鞘里挣出来，绒绒的，带着一种日光晒暖后的淡金色，风一来，便漫天地舞，像无数句未及说出便已飞扬起来的喁喁私语。那时，湿地是活的，饱满的，每一寸空气都在忙着什么。苇叶是新抽的，绿得能滴下汁水，互相摩挲着，沙沙地响；不知名的水鸟，从这一丛菖蒲后“忒儿”一声飞到另一丛，翅膀划开凝滞的水汽，也划开满湿地的岑寂。于是，那岑寂便成了最好的衬底，让所有的响动，哪怕再细微，都清晰起来；都成了秘而不宣的、却心照不宣的交换。',
@@ -51,7 +51,7 @@ window.FRAMELET_ARTICLES = [
     imageAlt: '',
     caption: '',
     closingZh: '文字：刘李',
-    closingEn: 'Written by Liu Li',
+    closingEn: 'Written by Nate Lew Lee',
     bodyZh: [
       '这念头，不知何时生了根，竟成了一口幽深的井，时不时地，我便要往里头望上一望。',
       '对于身边人，我总学不会有所保留。这性子怕是改不了了。我惯常将他们放在比自己更重的位置，像是捧着最薄的白瓷杯，小心翼翼。他们说过的话，我记着；他们需要时，我总在头一个应声；每一次相处，都认认真真地对待。我以为，这般赤诚地捧出去的心，总能换回些同样的暖意罢。可世间的账，哪是这样算的呢？',
@@ -95,7 +95,7 @@ window.FRAMELET_ARTICLES = [
     imageAlt: '',
     caption: '',
     closingZh: '文字：刘李',
-    closingEn: 'Written by Liu Li',
+    closingEn: 'Written by Nate Lew Lee',
     bodyZh: [
       '二月的凌晨，风还是凉的。我从出租车上下来，站在老街的入口，忽然就走不动了。这条街我是认得的。或者说，我是认得它从前的样子。那时候它还叫大街，是方圆几里最繁华的地方。百货店的玻璃柜台里摆着花花绿绿的糖果，米粮店门口永远堆着麻袋，空气里飘着新米的香。可现在它缩在照母山的一角，像个打盹的老人，任谁也看不出它曾经的风光。',
       '走到老街的入口，却怎么也迈不开步子了。不是不想走进去。我是知道，走进去的那个我，已经不是从前的我了。而老街，也早就不是从前的老街。我们都在时间里漂着，谁也回不了头。',
@@ -146,11 +146,11 @@ window.FRAMELET_ARTICLES = [
     date: '2025-09-16',
     displayDateZh: '2025年9月16日',
     image: 'assets/black-tiger.png',
-    imageAlt: '深夜监控画面中，两只狗守在老屋门外 / Two dogs keep watch outside the old house at night',
+    imageAlt: '深夜监控画面中，两只狗守在老屋门外 / Two dogs keep watch outside the family home in the countryside at night',
     caption: '老屋的深夜监控画面 · 2025年9月16日',
-    captionEn: 'Night camera view of the old house · September 16, 2025',
+    captionEn: 'Night camera view of the family home in the countryside · September 16, 2025',
     closingZh: '图文：刘李',
-    closingEn: 'Text and image by Liu Li',
+    closingEn: 'Text and image by Nate Lew Lee',
     bodyZh: [
       '那黑狗，便叫黑虎了。是亲戚抱来的，一团墨绒似的，搁在乡下老屋的堂前。都说土狗土狗，它却土得不大正宗——短毛，油亮亮地贴着身；耳朵软软耷着，倒有几分像城里人娇养的那种拉布拉多，只是永远长不大似的，定格在憨憨的半大模样。',
       '我总疑心它是有些痴气的。叫它“黑虎”，它是浑然不觉的，只拿湿漉漉的眼瞧你。教它握手、坐下，更是对狗弹琴了。它便蹲在那儿，尾巴不紧不慢扫着地上的灰，仿佛在笑人的多事。爷爷倒宽容：“狗嘛，晓得看家就够了。”它确是不吠的，生人来，也只喉咙里呜噜两声，算是尽了本分。',
@@ -160,12 +160,12 @@ window.FRAMELET_ARTICLES = [
       '只是我总想起它从前等奶奶的样子——那份静默的、无需召唤的陪伴。如今它也在等，等一场或许永不会到来的赦免。老屋的岁月悠长，它的罪与罚，都被裹进了柴米油盐的日常里，成了另一味说不清道不明的佐料。'
     ],
     bodyEn: [
-      'The black dog came to be called Black Tiger. A relative brought him to the old country house and set him down before the main room, a ball of ink-dark fluff. Everyone called him a village mutt, though he was not entirely convincing as one. His short coat lay sleek and glossy against his body, and his soft, drooping ears made him look a little like one of those Labradors pampered by city families. Yet he never seemed to grow up. He remained forever in that simple, half-grown form.',
-      'I often suspected he was a little slow. Call “Black Tiger” and he showed no sign of knowing you meant him; he only watched with damp, shining eyes. Teaching him to shake hands or sit was even more pointless. He would squat there, tail sweeping the dust at an unhurried pace, as if amused by all this human fuss. Grandfather was forgiving. “He is a dog. Knowing how to guard the house is enough.” In truth, he rarely barked. When strangers came, he gave only a low rumble in his throat and considered his duty done.',
-      'His meals followed ours. Morning’s leftover porridge, scraps from lunch, bits of meat fallen from the dinner table, even the old leaves and roots Grandmother tossed aside while sorting vegetables—all became his feast. He had his own enamel bowl, its blue rim chipped and mottled, always filled with some mixed blessing: half a steamed bun soaked in pork-rib broth, wisps of egg stirred into rice, sometimes red shrimp shells and glistening slices of fat. He ate with devotion, curling his tongue with such care that he licked the rim bright enough to reflect a face. Strangely, this diet gave him a magnificent coat. It was a deep, heavy black, and in sunlight a faint violet gleam moved across the tips like fine satin. No one ever seemed to bathe him, yet he carried none of the rank odor of city dogs. Instead he smelled warm, like straw baked through by the sun, mingled with cooking smoke—part of the old house’s own scent.',
-      'On sleepless nights, when homesickness hollowed me out, I would take up my phone and open the camera feed from the old house. Cold white light filled the screen, showing the main room at midnight. Once, Grandmother crossed the frame in a jacket, up in the night to use the toilet. Two shadows quietly followed: Black Tiger and the big yellow dog. They did not go inside. They sat side by side outside the door, silent as stone guardians. Dim yellow light leaked through the crack and gilded their fur. At the sound of flushing, their ears lifted. When the door creaked open, two pairs of eyes shone toward her and two tails began to sway. Grandmother muttered, “What did you follow me for?” They pressed close to her trouser legs and escorted her all the way back to bed.',
+      'The black dog came to be called Black Tiger. A relative brought him to our family home in the countryside and set him down before the main room, a ball of ink-dark fluff. Everyone called him a village mutt, though he was not entirely convincing as one. His short coat lay sleek and glossy against his body, and his soft, drooping ears made him look a little like one of those Labradors pampered by city families. Yet he never seemed to grow up. He remained forever in that simple, half-grown form.',
+      'I often suspected he was a little slow. Call “Black Tiger” and he showed no sign of knowing you meant him; he only watched with damp, shining eyes. Teaching him to shake hands or sit was even more pointless. He would squat there, tail sweeping the dust at an unhurried pace, as if amused by all this human fuss. Grandfather was forgiving. “He is a dog. Knowing how to guard the home is enough.” In truth, he rarely barked. When strangers came, he gave only a low rumble in his throat and considered his duty done.',
+      'His meals followed ours. Morning’s leftover porridge, scraps from lunch, bits of meat fallen from the dinner table, even the old leaves and roots Grandmother tossed aside while sorting vegetables—all became his feast. He had his own enamel bowl, its blue rim chipped and mottled, always filled with some mixed blessing: half a steamed bun soaked in pork-rib broth, wisps of egg stirred into rice, sometimes red shrimp shells and glistening slices of fat. He ate with devotion, curling his tongue with such care that he licked the rim bright enough to reflect a face. Strangely, this diet gave him a magnificent coat. It was a deep, heavy black, and in sunlight a faint violet gleam moved across the tips like fine satin. No one ever seemed to bathe him, yet he carried none of the rank odor of city dogs. Instead he smelled warm, like straw baked through by the sun, mingled with cooking smoke—part of the country home’s own scent.',
+      'On sleepless nights, when homesickness hollowed me out, I would take up my phone and open the camera feed from our family home in the countryside. Cold white light filled the screen, showing the main room at midnight. Once, Grandmother crossed the frame in a jacket, up in the night to use the toilet. Two shadows quietly followed: Black Tiger and the big yellow dog. They did not go inside. They sat side by side outside the door, silent as stone guardians. Dim yellow light leaked through the crack and gilded their fur. At the sound of flushing, their ears lifted. When the door creaked open, two pairs of eyes shone toward her and two tails began to sway. Grandmother muttered, “What did you follow me for?” They pressed close to her trouser legs and escorted her all the way back to bed.',
       'A few days ago, I opened the camera again. The courtyard was empty. I asked Grandfather. “Black Tiger got into trouble. Killed the neighbor’s chicken.” After that, I never again saw the dark shape rolling in the sunlight. A chain fastened him beneath the eaves; his whole world shrank to a small square of shade. He still lay quietly, looking toward the ridges where he once ran, toward the neighbor’s goats sneaking over to eat leaves, toward an occasional sparrow in flight. When his bowl arrived, he still ate with the same attention. His coat remained as black and bright as ever.',
-      'But I keep remembering how he used to wait for Grandmother—the quiet companionship that needed no summons. Now he, too, is waiting: waiting for a pardon that may never come. Time moves slowly at the old house. His crime and punishment have been folded into the ordinary business of rice, oil, firewood, and salt, becoming one more flavor no one can quite name.'
+      'But I keep remembering how he used to wait for Grandmother—the quiet companionship that needed no summons. Now he, too, is waiting: waiting for a pardon that may never come. Time moves slowly at our country home. His crime and punishment have been folded into the ordinary business of rice, oil, firewood, and salt, becoming one more flavor no one can quite name.'
     ]
   }
 ];
